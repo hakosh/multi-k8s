@@ -10,7 +10,7 @@ docker push hakosh/multi-worker:latest
 docker push hakosh/multi-worker:$SHA
 
 kubectl apply -f k8s
-kubectl set image deployments/client-deployment server=hakosh/multi-client:$SHA
+kubectl set image deployments/client-deployment client=hakosh/multi-client:$SHA
 kubectl set image deployments/server-deployment server=hakosh/multi-server:$SHA
-kubectl set image deployments/worker-deployment server=hakosh/multi-worker:$SHA
+kubectl set image deployments/worker-deployment worker=hakosh/multi-worker:$SHA
 
